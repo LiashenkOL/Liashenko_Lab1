@@ -4,14 +4,14 @@
 #include <algorithm>
 
 using namespace std;
-// Функція для застосування ротора до символу
+
 char applyRotor(char c, const string& rotor) {
-    return rotor[c - 'A'];  // Повертає символ, який відповідає вхідному символу в роторі
+    return rotor[c - 'A'];  
 }
-// Функція для зворотного застосування ротора до символу
+
 char reverseRotor(char c, const string& rotor) {
     return 'A' + find(rotor.begin(), rotor.end(), c) - rotor.begin();
-} // Знаходить позицію вхідного символа в роторі і повертає відповідну літеру алфавіту
+}
 
 string encode(const string& message, int shift, const vector<string>& rotors) {
     string result;
